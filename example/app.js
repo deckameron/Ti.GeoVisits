@@ -191,7 +191,7 @@ win.addEventListener('focus',function(){
 win.addEventListener('open',function(){
 	if(visits.isSupported()){
 		setTimeout(function(){
-			Ti.Geolocation.requestAuthorization(Ti.Geolocation.AUTHORIZATION_ALWAYS);		
+			Titanium.Geolocation.requestLocationPermissions(Titanium.Geolocation.AUTHORIZATION_ALWAYS);      	
 		},1000);
 	}else{
 		alert('This functionality is not supported. Check your logs');	
